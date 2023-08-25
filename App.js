@@ -1,25 +1,35 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react'
+import ItemList from './ItemList';
+import Contador from './Contador/Contador';
+import RepositoryList from './RepositoryList/RepositoryList';
+
 
 export default function App() {
+
+  const itens = [
+    {
+      id:1,
+      nome:"item1",
+      descricao:"teste"
+    },
+    {
+      id:1,
+      nome:"item1",
+      descricao:"teste"
+    },
+    {
+      id:1,
+      nome:"item1",
+      descricao:"teste"
+    },
+    {
+      id:1,
+      nome:"item1",
+      descricao:"teste"
+    }
+  ]
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>hello world</Text>
-      <StatusBar style="auto" />
-    </View>
-  );e
+      <ItemList itens={itens}/>
+  );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "black",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  text: {
-    color: "#blue",
-    fontSize: 30,
-
-  }
-});
